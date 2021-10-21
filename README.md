@@ -39,6 +39,7 @@ It was clear, an alternate approach was needed to bypass ColdFusion's built-in l
 ### References
 * [JSch sFTP Example (sFTP.java)](http://www.jcraft.com/jsch/examples/Sftp.java.html)
 * [Running Java libraries in ColdFusion](https://www.compoundtheory.com/running-your-own-java-libraries-in-coldfusion-with-style/)
+* [Understanding Key Differences Between FTP, FTPS And SFTP](https://www.jscape.com/blog/bid/75602/understanding-key-differences-between-ftp-ftps-and-sftp)
 
 ### POC code for testing
 ```coldfusion
