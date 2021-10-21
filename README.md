@@ -12,7 +12,7 @@ A partner we work with and transfer XML file to periodically via FTP, reached ou
 
 Attempting to use the [CFFTP tag in ColdFusion 9 (CF9)](https://cfdocs.org/cfftp) to transfer files over sFTP, failed due to incompatible libraries packed with CF9. This issue may also affect other version of Adobe ColdFusion (untested).
 
-*Example CFFTP tage implamentation in ColdFusion:*
+*Example CFFTP tag implementation in ColdFusion:*
 ```coldfusion
 <cfftp action = "open"
 username = "myusername"
@@ -23,18 +23,18 @@ server = "ftp.example.com"
 secure = "yes">
 ```
 *Resulting error:*
-> **Detail:** Verify your connection attributes: username, password, server, fingerprint, port, key, connection, proxyServer, and secure (as applicable). 
-> 
-> **Error:** Algorithm negotiation fail.
-> 
-> **Message:** An error occurred while establishing an sFTP connection.
+```
+Detail: Verify your connection attributes: username, password, server, fingerprint, port, key, connection, proxyServer, and secure (as applicable). 
+Error: Algorithm negotiation fail.
+Message: An error occurred while establishing an sFTP connection.
+```
 
 ## The solution
 It was clear, an alternate approach was needed to bypass ColdFusion's built-in libraries.
 
 ### Dependencies
 * [jsch-0.1.55.jar](http://www.jcraft.com/jsch/)
-* [JavaLoader](https://github.com/markmandel/JavaLoader)
+* [JavaLoader](https://github.com/markmandel/JavaLoader) | [Wiki](https://github.com/markmandel/JavaLoader/wiki)
 
 ### References
 * [JSch sFTP Example (sFTP.java)](http://www.jcraft.com/jsch/examples/Sftp.java.html)
